@@ -1,0 +1,25 @@
+#ifndef _OBJECT_
+#define _OBJECT_
+
+#include "head.h"
+#include "halfedge.h"
+#include "vertex.h"
+#include "face.h"
+class object
+{
+ public:
+  std::vector<vertex > myvertexs;
+  std::vector<face > myfaces;
+  std::vector<halfedge > myhalfedges;
+
+  int num_vertex;
+  int num_face;
+  int num_halfedge;
+
+  int sub_level;
+	
+  object(){};
+  ~object(){};
+  void subdivide(int sub_level);
+};
+#endif

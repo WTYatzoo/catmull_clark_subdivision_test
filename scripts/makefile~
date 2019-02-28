@@ -1,0 +1,5 @@
+$(message "GET INTO makefile")
+regression:
+	$(EXE) prog=regression sample_strategy=${SAMPLE_STRATEGY} lambda=${LAMBDA} num_para=${NUM_PARA} poissonratio=${POISSONRATIO} youngmodulus1=${YOUNGMODULUS1} youngmodulus2=${YOUNGMODULUS2} unit_length=${UNIT_LENGTH} line_search=${LINE_SEARCH} weight_line_search=${WEIGHT_LINE_SEARCH} constitutive_model=${CONSTITUTIVE_MODEL} out_dir=${OUT_DIR} 
+simulation:
+	$(EXE) prog=simulation simulation=${SIMULATION} frame=${FRAME} dt=${DT} force_function=${FORCE_FUNCTION} min_force=${MIN_FORCE} increment_force=${INCREMENT_FORCE} max_force=${MAX_FORCE} length=${LENGTH} width=${WIDTH} height=${HEIGHT} num_para=${NUM_PARA} poissonratio=${POISSONRATIO} youngmodulus1=${YOUNGMODULUS1} youngmodulus2=${YOUNGMODULUS2} unit_length=${UNIT_LENGTH} line_search=${LINE_SEARCH} weight_line_search=${WEIGHT_LINE_SEARCH} constitutive_model=${CONSTITUTIVE_MODEL} gravity=${GRAVITY} density=${DENSITY} out_dir=${OUT_DIR}
